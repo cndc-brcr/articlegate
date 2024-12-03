@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Compass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Login to Access More Features</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+         
+   <div id="login-overlay" class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="button" id="login-btn">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Campus Compass</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+ <script>
+  document.getElementById('login-btn').addEventListener('click', () => {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username && password) {
+        window.location.href = 'index.html'; 
+    } else {
+        alert('Please enter both username and password.');
+    }
+});
+</script>
